@@ -1,4 +1,5 @@
 # Chicago-Crime-Analyzer
+## Google drive link: https://drive.google.com/drive/folders/1K5GamUSIYUmk3kzcaYsJF9FE1iBeRP_w?usp=sharing
 1.Objective: To leverage historical and recent crime data to identify patterns, trends, and hotspots within Chicago, supporting strategic decision-making, resource allocation, and crime prevention strategies.
 
 2.Dataset Description: The dataset contains records of reported crimes in Chicago, including various attributes such as ID, case number, date, crime type, location, arrest status, etc.
