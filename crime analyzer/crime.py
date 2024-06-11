@@ -5,9 +5,6 @@ import seaborn as sns
 import folium
 from streamlit_folium import folium_static
 from folium.plugins import HeatMap
-from sklearn.tree import DecisionTreeClassifier, plot_tree
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, recall_score
 from sklearn.utils.multiclass import unique_labels
 
 # Set the option to suppress the pyplot global use warning
