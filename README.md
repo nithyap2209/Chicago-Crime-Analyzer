@@ -71,8 +71,7 @@
     plt.xlabel('Year')
     plt.ylabel('Number of Crimes')
     plt.show()
-
-
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/bf676ae4-6f14-451a-a70c-86addcd1c337)
 
 ## Peak Crime Hours
     df['Hour'] = pd.to_datetime(df['Date']).dt.hour
@@ -85,6 +84,7 @@
     plt.xticks(range(0, 24))
     plt.grid(True)
     plt.show()
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/b4b28117-2208-4265-b19e-353f46fb3184)
 
 
 ## Geospatial Analysis - Crime Hotspots
@@ -102,6 +102,7 @@
     plt.ylabel('Number of Crimes')
     plt.legend(title='Primary Type', bbox_to_anchor=(1.05, 1))
     plt.show()
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/c0150f28-5512-4e00-bb8a-7aa7c4f52886)
 
 
 
@@ -115,6 +116,7 @@
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/8424eb86-0db4-4ab5-b52d-5834335960f7)
 
 
 ## Severity Analysis
@@ -126,6 +128,7 @@
     plt.title('Severity Analysis of Crimes')
     plt.ylabel('')
     plt.show()
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/e7d72d45-0119-4f75-a0d7-61732bcc4c2b)
 
 ## Arrest and Domestic Incident Analysis
     arrest_rates_by_type = df.groupby('Primary Type')['Arrest'].mean() * 100
@@ -138,6 +141,7 @@
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/4619aec0-b98d-4e57-a8ff-dc8be305c7b4)
 
 
 ## Domestic vs. Non-Domestic Crimes
@@ -148,6 +152,7 @@
     plt.ylabel('')
     plt.show()
     
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/b596b648-d4b0-426c-aabb-15d1c187af8f)
 
 
 ## Location-Specific Analysis
@@ -160,6 +165,7 @@
     plt.tight_layout()
     plt.show()
     
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/a9ebf76c-40a2-4ae2-8607-aa10f2782b57)
 
 
 ## Crime Types by Location
@@ -174,6 +180,7 @@
     plt.tight_layout()
     plt.show()
 
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/f5ada1bd-3fee-4532-a992-d8a7dfaa157e)
 
 
 ## Comparison by Beat and Community Area
@@ -194,7 +201,9 @@
     plt.ylabel('Number of Crimes')
     plt.tight_layout()
     plt.show()
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/7f8cd938-d864-48d0-9152-774e82068570)
 
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/4df4e3da-ccb5-45d7-8c75-9893d7d861c0)
 
 ## Seasonal and Weather Impact
     df['Date'] = pd.to_datetime(df['Date'])
@@ -221,6 +230,7 @@
     plt.tight_layout()
     plt.show()
 
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/29882c5a-b735-467c-8156-c224b2365267)
 
 
 ## Repeat Offenders and Recidivism
@@ -233,6 +243,7 @@
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
     plt.show()
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/c6b69a5a-5005-478f-83d7-e824165f9536)
 
 ## Create dataset for model
     df['Month'] = df['Date'].dt.month
@@ -291,7 +302,23 @@
     recall_per_class = recall_score(y_test, y_pred, average=None)
     uar = recall_per_class.mean()
     print(f"\nUnweighted Average Recall (UAR): {uar:.2f}")
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/630a99ea-e4f2-4fcb-9b10-0eaf5f54fb4f)
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/11f9acb6-768d-4ceb-a7ba-2dfc8013ade4)
 
+---------- Confusion Matrix ----------
+[[170]]
+
+---------- Classification Report ----------
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       170
+
+    accuracy                           1.00       170
+   macro avg       1.00      1.00      1.00       170
+weighted avg       1.00      1.00      1.00       170
+
+
+Unweighted Average Recall (UAR): 1.00
 
 ## Support Vector Classifier
     svc_model = SVC(kernel='linear', random_state=1)
@@ -320,7 +347,19 @@
     recall_per_class_svc = recall_score(y_test, y_pred_svc, average=None)
     uar_svc = recall_per_class_svc.mean()
     print(f"\nSupport Vector Classifier Unweighted Average Recall (UAR): {uar_svc:.2f}")
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/f276ebda-b93f-4b1d-9c9b-4a45c8bab1b1)
 
+---------- Support Vector Classifier Classification Report ----------
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       170
+
+    accuracy                           1.00       170
+   macro avg       1.00      1.00      1.00       170
+weighted avg       1.00      1.00      1.00       170
+
+
+Support Vector Classifier Unweighted Average Recall (UAR): 1.00
 ## Logistic Regression
     logistic_model = LogisticRegression(random_state=1, max_iter=200)
     logistic_model.fit(X_train, y_train)
@@ -348,4 +387,15 @@
     recall_per_class_logistic = recall_score(y_test, y_pred_logistic, average=None)
     uar_logistic = recall_per_class_logistic.mean()
     print(f"\nLogistic Regression Unweighted Average Recall (UAR): {uar_logistic:.2f}")
+![image](https://github.com/nithyap2209/Chicago-Crime-Analyzer/assets/92367257/201824b8-9e7a-4131-be5b-efd52b72abe2)
+---------- Logistic Regression Classification Report ----------
+              precision    recall  f1-score   support
 
+           0       1.00      1.00      1.00       170
+
+    accuracy                           1.00       170
+   macro avg       1.00      1.00      1.00       170
+weighted avg       1.00      1.00      1.00       170
+
+
+Logistic Regression Unweighted Average Recall (UAR): 1.00
